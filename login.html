@@ -6,59 +6,52 @@
     <title>Login - Tourism Event Management</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f4f4f4 60%, #0077cc 40%);
-            height: 100vh;
+            background-color: #eef2f3;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        .container {
-            display: flex;
+        .login-container {
             background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            width: 800px;
-            max-width: 90%;
-        }
-
-        .image-section {
-            width: 50%;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Kingdom_Centre_%28cropped%29.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .form-section {
-            width: 50%;
             padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
         }
 
         h2 {
-            margin-bottom: 1.5rem;
             text-align: center;
             color: #0077cc;
         }
 
-        input[type="email"], input[type="password"] {
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        input[type="email"],
+        input[type="password"] {
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
 
         button {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.7rem;
+            margin-top: 1.5rem;
             background-color: #0077cc;
-            border: none;
             color: white;
-            font-weight: bold;
+            border: none;
             border-radius: 4px;
+            font-weight: bold;
             cursor: pointer;
         }
 
@@ -68,16 +61,19 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-section"></div>
-        <div class="form-section">
-            <h2>Login</h2>
-           <form action="event_details.html" method="get">
-                <input type="email" placeholder="Email" required><br>
-                <input type="password" placeholder="Password" required><br>
-                <button type="submit">Login</button>
-            </form>
-        </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="event_details.html" method="get">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
     </div>
+
 </body>
 </html>
